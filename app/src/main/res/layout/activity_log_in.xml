@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.hayashoppinlist.LogInActivity">
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="User Name"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="61dp" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text="password"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="121dp" />
+
+    <Button
+        android:id="@+id/btSingup"
+        android:layout_width="91dp"
+        android:layout_height="47dp"
+        android:text="Sing up"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="249dp" />
+
+    <Button
+        android:id="@+id/btSingin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sing in"
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="184dp" />
+
+    <Button
+        android:id="@+id/btForget"
+        android:layout_width="167dp"
+        android:layout_height="34dp"
+        android:text="Forget password"
+        tools:layout_editor_absoluteX="187dp"
+        tools:layout_editor_absoluteY="198dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        app:layout_constraintGuide_begin="20dp"
+        android:orientation="horizontal" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline2"
+        app:layout_constraintGuide_begin="20dp"
+        android:orientation="vertical" />
+
+</android.support.constraint.ConstraintLayout>
