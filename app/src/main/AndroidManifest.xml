@@ -17,7 +17,20 @@
             </intent-filter>
         </activity>
         <activity android:name=".SingUP" />
-        <activity android:name=".signup"></activity>
+        <activity android:name=".signup" />
+        <activity
+            android:name=".mainlisttragments.MainListActivivty"
+            android:label="@string/title_activity_main_list_activivty"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".mainlisttragments.MainListActivity"
+            android:label="@string/title_activity_main_list"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".mainlistfragments.MainListActivity"
+            android:label="@string/title_activity_main_list"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

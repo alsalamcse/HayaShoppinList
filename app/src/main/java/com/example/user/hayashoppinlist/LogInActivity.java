@@ -1,9 +1,13 @@
 package com.example.user.hayashoppinlist;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.user.hayashoppinlist.mainlistfragments.MainListActivity;
 
 public class LogInActivity extends AppCompatActivity {
 
@@ -26,6 +30,14 @@ public class LogInActivity extends AppCompatActivity {
         btSingin =(Button) findViewById(R.id.btSingin);
         btForget =(Button) findViewById(R.id.btForget);
 
+
+        btSingin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i= new Intent(getBaseContext(), MainListActivity.class);
+                startActivity(i);
+            }
+        });
 
 
 
