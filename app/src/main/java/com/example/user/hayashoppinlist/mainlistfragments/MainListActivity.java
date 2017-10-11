@@ -1,5 +1,6 @@
 package com.example.user.hayashoppinlist.mainlistfragments;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -19,6 +20,7 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
+import com.example.user.hayashoppinlist.AddItem;
 import com.example.user.hayashoppinlist.R;
 
 public class MainListActivity extends AppCompatActivity {
@@ -58,10 +60,14 @@ public class MainListActivity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);//allllllllllll+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent i=new Intent(getBaseContext(), AddItem.class);
+                startActivity(i);//kef norbooooooooooot
+                 
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
