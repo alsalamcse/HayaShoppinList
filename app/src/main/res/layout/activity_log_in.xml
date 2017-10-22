@@ -15,7 +15,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="4dp">
+        tools:layout_editor_absoluteY="6dp">
 
         <EditText
             android:id="@+id/etPassword"
@@ -46,7 +46,7 @@
                 android:id="@+id/btSingup"
                 android:layout_width="120dp"
                 android:layout_height="48dp"
-                android:text="Sing up"
+                android:text="@string/signup"
                 tools:layout_editor_absoluteX="85dp"
                 tools:layout_editor_absoluteY="249dp" />
 
@@ -54,7 +54,7 @@
                 android:id="@+id/btSingin"
                 android:layout_width="107dp"
                 android:layout_height="wrap_content"
-                android:text="Sing in"
+                android:text="@string/signin"
                 tools:layout_editor_absoluteX="83dp"
                 tools:layout_editor_absoluteY="184dp" />
 

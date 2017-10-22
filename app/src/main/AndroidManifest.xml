@@ -16,7 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SingUP" />
         <activity android:name=".signup" />
         <activity
             android:name=".mainlisttragments.MainListActivivty"
@@ -30,7 +29,8 @@
             android:name=".mainlistfragments.MainListActivity"
             android:label="@string/title_activity_main_list"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".AddItem"></activity>
+        <activity android:name=".AddItem" />
+        <activity android:name=".MyShops"></activity>
     </application>
 
 </manifest>

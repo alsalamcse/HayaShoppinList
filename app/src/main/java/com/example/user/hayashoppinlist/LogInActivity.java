@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.user.hayashoppinlist.mainlistfragments.MainListActivity;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class LogInActivity extends AppCompatActivity {
 
@@ -16,6 +18,8 @@ public class LogInActivity extends AppCompatActivity {
     private Button btSingup;
     private Button btSingin;
     private Button btForget;
+
+
 
 
 
@@ -31,13 +35,19 @@ public class LogInActivity extends AppCompatActivity {
         btForget =(Button) findViewById(R.id.btForget);
 
 
-        btSingin.setOnClickListener(new View.OnClickListener() {
+        btSingup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i= new Intent(getBaseContext(), MainListActivity.class);
+                Intent i= new Intent(getBaseContext(),signup.class);
                 startActivity(i);
+
+
+
             }
         });
+
+
+
 
 
 

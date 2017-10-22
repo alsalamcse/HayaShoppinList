@@ -14,20 +14,20 @@
         tools:layout_editor_absoluteY="27dp">
 
         <EditText
-            android:id="@+id/erName"
+            android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
+            android:hint="@string/name"
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textEmailAddress"
-            android:text="email" />
+            android:hint="@string/email"
+            android:inputType="textEmailAddress" />
 
         <EditText
             android:id="@+id/etPassword"
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPassword"
-            android:text="Password" />
+            android:text="@string/password" />
 
         <EditText
             android:id="@+id/etRepassword"

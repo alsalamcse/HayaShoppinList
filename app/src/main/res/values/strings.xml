@@ -10,4 +10,14 @@
     <string name="Name">Item Name</string>
     <string name="Amount">ItemAmount</string>
     <string name="Price">ItemPric</string>
+    <string name="EditName">EditName</string>
+    <string name="EdintAmount" />
+    <string name="EditPrice">EditPrice</string>
+    <string name="EditAmount">EditAmount</string>
+    <string name="EdirPrice">EdirPrice</string>
+    <string name="signin">Sign In</string>
+    <string name="signup">Sign Up</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
 </resources>
