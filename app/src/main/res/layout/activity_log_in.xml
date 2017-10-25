@@ -32,8 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="43dp"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="User Name"
+            android:inputType="textEmailAddress"
             tools:layout_editor_absoluteX="85dp"
             tools:layout_editor_absoluteY="61dp" />
 

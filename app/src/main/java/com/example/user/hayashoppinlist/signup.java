@@ -55,7 +55,7 @@ if (isok)
 
 }
     public void creatAcount(String email, String passwprd) {// theeeeee  Sing up
-        auth.createUserWithEmailAndPassword(email, passwprd).addOnCompleteListener(signup.this, new OnCompleteListener<AuthResult>() {
+        auth.createUserWithEmailAndPassword(email, passwprd).addOnCompleteListener(signup.this,new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
