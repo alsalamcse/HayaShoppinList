@@ -8,8 +8,8 @@
     tools:context="com.example.user.hayashoppinlist.AddItem">
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="1046dp"
+        android:layout_height="1415dp"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
 
@@ -35,6 +35,12 @@
                 android:ems="10"
                 android:hint="@string/Amount"
                 android:inputType="numberDecimal" />
+
+            <TextView
+                android:id="@+id/etUnits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
 
             <EditText
                 android:id="@+id/etPrice"
