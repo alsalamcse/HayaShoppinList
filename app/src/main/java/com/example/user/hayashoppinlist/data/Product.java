@@ -29,12 +29,61 @@ public class Product
             ;
     private  String keyId ;
 
-    public Product(String name, double price, double amount) {
-        this.name = name;
-        this.price = price;
-        this.amount = amount;
-        this.isCompleted = false;
-        this.imagPath=null;
-        this.keyId=null;
+    public Product() {
+
     }
+
+
+
+    public String getName() {
+        return name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public boolean isCompleted() {
+        return isCompleted;
+    }
+
+    public String getImagPath() {
+        return imagPath;
+    }
+
+    public String getKeyId() {
+        return keyId;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
+
+    public void setCompleted(boolean completed) {
+        isCompleted = completed;
+    }
+
+    public void setImagPath(String imagPath) {
+        this.imagPath = imagPath;
+    }
+
+    public void setKeyId(String keyId) {
+        this.keyId = keyId;
+    }
+
+
 }
+
+

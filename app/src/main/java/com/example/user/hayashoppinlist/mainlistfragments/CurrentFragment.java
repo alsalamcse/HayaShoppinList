@@ -42,7 +42,7 @@ private TextView tvTotalvalue, tvCont, tvCountvalue,tvTotal;
 
 
         String [] ar={ "noor","Haya","samih","teya"};
-        ArrayAdapter<String> arrayAdapter= new ArrayAdapter<String>(this,)
+        //ArrayAdapter<String> arrayAdapter= new ArrayAdapter<String>(this,)
 
         return view;
     }

@@ -16,7 +16,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class LogInActivity extends AppCompatActivity implements View.OnClickListener{
+public class LogInActivity extends AppCompatActivity  {
 
     private EditText etPassword;
     private  EditText etEmail;
@@ -39,15 +39,30 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
         btSingup = (Button) findViewById(R.id.btSingup);
         btSingin = (Button) findViewById(R.id.btSingin);
         btForget = (Button) findViewById(R.id.btForget);
-        btSingin.setOnClickListener(this);
+        btSingup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i= new Intent(getBaseContext(),signup.class);
+                startActivity(i);
+
+            }
+        });
+        btSingin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                datahander();
+            }
+        });
          auth = FirebaseAuth.getInstance();
         firebaseUser = auth.getCurrentUser();
 
 
     }
-    public void datahander(){
-        String stEmail=etEmail.getText().toString();
-        String stPassword=etPassword.getText().toString();
+    public void datahander() {
+        String stEmail = etEmail.getText().toString();
+        String stPassword = etPassword.getText().toString();
+        signIn(stEmail,stPassword);
+    }
 
 
 
@@ -55,47 +70,43 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
         auth.signInWithEmailAndPassword(email,passw).addOnCompleteListener(LogInActivity.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful())
-                {
+                if(task.isSuccessful()) {
                     Toast.makeText(LogInActivity.this, "signIn Successful.", Toast.LENGTH_SHORT).show();
-                    Intent intent=new Intent(LogInActivity.this,.class);
+                    Intent intent = new Intent(LogInActivity.this, MainListActivity.class);
                     startActivity(intent);
                     finish();
 
+                }
+                else {
+                    Toast.makeText(LogInActivity.this, "signIn not Successful."+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                    task.getException().printStackTrace();
 
                 }
-        }) {
-
-        }
-                }
-
-
-
-
-
-
-
-
-
-
-
-
-        btSingup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i= new Intent(getBaseContext(),signup.class);
-                startActivity(i);
-
-
-
             }
         });
-
-
-
-
+    }
 
 
 
     }
-}
+
+
+
+//        btSingup.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//
+//
+//
+//            }
+//        });
+
+
+
+
+
+
+
+
+
