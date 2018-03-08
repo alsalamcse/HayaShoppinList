@@ -28,7 +28,7 @@ public class HistoryFragment extends Fragment {
         // Inflate the layout for this fragment
 
          View view = inflater.inflate(R.layout.fragment_history,container) ;
-        lstHistory= (ListView) view.findViewById(R.id.lstHistory)   ;
+//        lstHistory= (ListView) view.findViewById(R.id.lstHistory)   ;
 
         return  view;
     }

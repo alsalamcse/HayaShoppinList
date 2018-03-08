@@ -48,29 +48,29 @@ public class MainListActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        // Create the adapter that will return a fragment for each of the three
-        // primary sections of the activity.
+//        // Create the adapter that will return a fragment for each of the three
+//        // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
-
-        // Set up the ViewPager with the sections adapter.
+//
+//        // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
-        mViewPager.setAdapter(mSectionsPagerAdapter);
-
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
-        tabLayout.setupWithViewPager(mViewPager);
-
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);//allllllllllll+
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(getBaseContext(), AddItem.class);
-                startActivity(i);//kef norbooooooooooot
-                 
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+    mViewPager.setAdapter(mSectionsPagerAdapter);
+//
+//        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+//        tabLayout.setupWithViewPager(mViewPager);
+//
+//
+//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);//allllllllllll+
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent i=new Intent(getBaseContext(), AddItem.class);
+//                startActivity(i);//kef norbooooooooooot
+//
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
 
     }
 
@@ -126,8 +126,8 @@ public class MainListActivity extends AppCompatActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_current, container, false);
-            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+//            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
+//            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
             return rootView;
         }
     }
@@ -146,15 +146,21 @@ public class MainListActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
 
             if(position==0) {
-                if (currentFragment == null)
-                    currentFragment = new CurrentFragment();
-                return currentFragment;
+//                if (currentFragment == null)
+//                    currentFragment = new CurrentFragment();
+//                return currentFragment;
+                return   PlaceholderFragment . newInstance(0) ;
+
             }
+            else
             if(position==1) {
-                if (historyFragment == null)
-                    historyFragment = new HistoryFragment();
-                return historyFragment;
+//                if (historyFragment == null)
+//                    historyFragment = new HistoryFragment();
+//                return historyFragment;
+                return   PlaceholderFragment . newInstance(1) ;
+
             }
+            else
             return null;
 
 

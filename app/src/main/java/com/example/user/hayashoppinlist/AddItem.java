@@ -77,13 +77,16 @@ public class AddItem extends AppCompatActivity {
 
          //6. bulding data reference = data path=data address
         DatabaseReference reference;
+        //
         reference = FirebaseDatabase.getInstance().getReference();
         reference.child(email).child(" myList"). push() .setValue(p).
+                // to completeListrner to check if the insertion is done
                 addOnCompleteListener(this, new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(AddItem.this, "Add product Faild", Toast.LENGTH_LONG);
+
                         }
                     }
 

@@ -39,6 +39,8 @@ public class LogInActivity extends AppCompatActivity  {
         btSingup = (Button) findViewById(R.id.btSingup);
         btSingin = (Button) findViewById(R.id.btSingin);
         btForget = (Button) findViewById(R.id.btForget);
+        auth = FirebaseAuth.getInstance();
+        firebaseUser = auth.getCurrentUser();
         btSingup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,14 +55,14 @@ public class LogInActivity extends AppCompatActivity  {
                 datahander();
             }
         });
-         auth = FirebaseAuth.getInstance();
-        firebaseUser = auth.getCurrentUser();
+
 
 
     }
     public void datahander() {
         String stEmail = etEmail.getText().toString();
         String stPassword = etPassword.getText().toString();
+        //todo validtae feilds : IsOK.....
         signIn(stEmail,stPassword);
     }
 

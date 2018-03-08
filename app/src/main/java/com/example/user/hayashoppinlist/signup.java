@@ -50,6 +50,10 @@ private  void  dataHander()
      etEmail.setError("Wrong Email");
      isok=false;
  }
+    if (stpassword.length() < 8) {
+        etPassword.setError("BAD PASSWORD");
+        isok = false;
+    }
 if (isok)
   creatAcount(stEmail,stpassword);
 
